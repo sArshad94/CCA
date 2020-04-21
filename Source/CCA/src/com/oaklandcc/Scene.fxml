@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oaklandcc.SceneController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadChar" text="Open a saved character" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveChar" text="Save a character" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#resetActionHandler" text="Reset All" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitActionHandler" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="315.0" layoutY="55.0" text="Gender" />
+      <ImageView fx:id="displayImg" fitHeight="290.0" fitWidth="255.0" layoutX="26.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="315.0" layoutY="99.0" text="Class" />
+      <Label layoutX="66.0" layoutY="337.0" text="Character name (1-10 characters)" />
+      <RadioButton fx:id="maleBtn" layoutX="375.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#maleChar" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="identity" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="femaleBtn" layoutX="434.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#femChar" text="Female" toggleGroup="$identity" />
+      <RadioButton fx:id="otherBtn" layoutX="505.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#otherChar" text="Other" toggleGroup="$identity" />
+      <ComboBox fx:id="classSelect" layoutX="375.0" layoutY="95.0" onAction="#selected" prefWidth="150.0" />
+      <Slider fx:id="slidThree" layoutX="375.0" layoutY="318.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="slidOne" layoutX="375.0" layoutY="192.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="slidTwo" layoutX="375.0" layoutY="257.0" showTickLabels="true" showTickMarks="true" />
+      <Label layoutX="337.0" layoutY="175.0" text="Justice" />
+      <Label layoutX="493.0" layoutY="175.0" text="Compassion" />
+      <Label layoutX="332.0" layoutY="240.0" text="Strength" />
+      <Label layoutX="493.0" layoutY="240.0" text="Wisdom" />
+      <Label layoutX="333.0" layoutY="301.0" text="Humility" />
+      <Label layoutX="498.0" layoutY="301.0" text="Honor" />
+      <Label layoutX="316.0" layoutY="149.0" text="Attributes" />
+      <TextField fx:id="charName" layoutX="80.0" layoutY="361.0" />
+   </children>
+</AnchorPane>
