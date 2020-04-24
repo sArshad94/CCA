@@ -22,6 +22,7 @@ public class CharacterCreationDemo extends Application {
         
         Scene scene = new Scene(root);
         
+        root.getStylesheets().add(getClass().getResource("Theme.css").toExternalForm());
         stage.setTitle("Character Creation");
         stage.setScene(scene);
         stage.show();
